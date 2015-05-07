@@ -9,11 +9,11 @@ and open the template in the editor.
 <web-app>
     <servlet>
         <servlet-name>Login</servlet-name>        
-        <servlet-class>com.example.login.loginServlet</servlet-class>
+        <servlet-class>com.example.controller.loginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>        
-        <servlet-class>com.example.login.LogoutServlet</servlet-class>
+        <servlet-class>com.example.controller.LogoutServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
