@@ -16,7 +16,8 @@ import java.util.Properties;
 
 
 /**
- CONNECTS TO THE DB
+ *
+ * @author Hazzan
  */
 public class DbUtil {
 

@@ -31,12 +31,16 @@ public class loginServlet extends HttpServlet{
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             userBean ub = new userBean();
+            
             ub.setUsername(username);
             ub.setPassword(password);
-            if(UserDao.isValid(ub)){
-            link = "home.jsp";
+            
             HttpSession session = request.getSession();
             session.setAttribute("username",username);
+            
+            if(UserDao.isValid(ub)){
+            link = "home.jsp";
+            session.setAttribute("users", UserDao.getAllUsers());
             }else{link = "index.jsp";}
             
             RequestDispatcher view = request.getRequestDispatcher(link);
